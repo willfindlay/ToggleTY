@@ -1,1 +1,15 @@
+'g:ToggleTY_height'	ToggleTY.txt	/*'g:ToggleTY_height'*
+'g:ToggleTY_position'	ToggleTY.txt	/*'g:ToggleTY_position'*
+'g:ToggleTY_toggle_mapping'	ToggleTY.txt	/*'g:ToggleTY_toggle_mapping'*
+'g:ToggleTY_toggle_mapping_insert'	ToggleTY.txt	/*'g:ToggleTY_toggle_mapping_insert'*
+'g:ToggleTY_toggle_mapping_normal'	ToggleTY.txt	/*'g:ToggleTY_toggle_mapping_normal'*
+'g:ToggleTY_toggle_mapping_terminal'	ToggleTY.txt	/*'g:ToggleTY_toggle_mapping_terminal'*
+ToggleTY	ToggleTY.txt	/*ToggleTY*
 ToggleTY.txt	ToggleTY.txt	/*ToggleTY.txt*
+ToggleTerminal	ToggleTY.txt	/*ToggleTerminal*
+toggle-ty	ToggleTY.txt	/*toggle-ty*
+togglety	ToggleTY.txt	/*togglety*
+togglety-configuration	ToggleTY.txt	/*togglety-configuration*
+togglety-contents	ToggleTY.txt	/*togglety-contents*
+togglety-intro	ToggleTY.txt	/*togglety-intro*
+togglety-usage	ToggleTY.txt	/*togglety-usage*

@@ -26,12 +26,16 @@ mapping will be an issue for regular vim users. I plan to fix this in the releas
 
 `cd ~/.vim/bundle && git clone https://github.com/HousedHorse/ToggleTY`
 
+Remember to generate helptags for the plugin. In Pathogen you can do so
+by running `:Helptags` after installing.
+
 ## Usage
 
 By default, press `<C-B>` to toggle the terminal window on and off. *It's that simple.*
 
-All key-bindings and settings are customizable. See documentation in the help menu for more info.
+All key-bindings and settings are customizable. See documentation in the help menu for more info
+(remember to run `Helptags` first!).
 
 ## Documentation
 
-When the plugin is installed, type `:h ToggleTY` for all necessary info.
+When the plugin is installed, type `:h ToggleTY` for all necessary info. Remember to generate your helptags first.
