@@ -1,0 +1,96 @@
+*ToggleTY.txt*    Toggle terminal window    v0.1.1
+*ToggleTY* *ToggleTerminal* *togglety* *toggle-ty*
+
+===============================================================================
+#     d888888P                            dP          d888888P dP    dP       #
+#        88                               88             88    Y8.  .8P       #
+#        88    .d8888b. .d8888b. .d8888b. 88 .d8888b.    88     Y8aa8P        #
+#        88    88'   88 88'   88 88'   88 88 88ooood8    88       88          #
+#        88    88.  .88 88.  .88 88.  .88 88 88.  ...    88       88          #
+#        dP     88888P'  8888P88  8888P88 dP  88888P'    dP       dP          #
+#                            .88      .88                                     #
+#                        d8888P   d8888P                                      #
+===============================================================================
+CONTENTS                                                     *togglety-contents*
+
+  1. Intro..................................|togglety-intro|
+  2. Configuration..........................|togglety-configuration|
+  3. Usage..................................|togglety-usage|
+
+===============================================================================
+INTRO                                                           *togglety-intro*
+
+A plugin to toggle a persistent terminal window. Written for NVIM version 0.3.5.
+Pretty K.I.S.S. (keep it simple, stupid) at the moment. Maybe I'll add some more
+features later.
+
+All keybindings and options are customizable (see |togglety-configuration|).
+
+Plugin by William Findlay <william@wfindlay.com>
+
+===============================================================================
+CONFIGURATION                                           *togglety-configuration*
+
+Overview:~
+
+  Keybindings:
+  |ToggleTY_toggle_mapping|...............Global binding for toggling the terminal.
+  |ToggleTY_toggle_mapping_normal|........Normal mode binding for toggling the terminal.
+  |ToggleTY_toggle_mapping_terminal|......Terminal mode binding for toggling the terminal.
+  |ToggleTY_toggle_mapping_insert|........Insert mode binding for toggling the terminal.
+
+  Settings:
+  |ToggleTY_height|.......................Height of the terminal window in lines.
+  |ToggleTY_position|.....................Position of the terminal window.
+
+
+Keybindings:~
+                                                 *'g:ToggleTY_toggle_mapping'*
+Global mapping for terminal window toggle.
+Overridden by mappings for specific modes. Default is <C-B>.
+  `let g:ToggleTY_toggle_mapping = '<C-B>'`
+
+                                          *'g:ToggleTY_toggle_mapping_normal'*
+Normal mapping for terminal window toggle.
+Overrides global mapping. Map to `''` to unbind.
+  `let g:ToggleTY_toggle_mapping_normal = ''`
+
+                                        *'g:ToggleTY_toggle_mapping_terminal'*
+Terminal mapping for terminal window toggle.
+Overrides global mapping. Map to `''` to unbind.
+  `let g:ToggleTY_toggle_mapping_terminal = ''`
+
+                                          *'g:ToggleTY_toggle_mapping_insert'*
+Insert mapping for terminal window toggle.
+Overrides global mapping. Map to `''` to unbind.
+  `let g:ToggleTY_toggle_mapping_insert = ''`
+
+Settings:~
+                                                         *'g:ToggleTY_height'*
+Height of the terminal window in lines.
+Possible values are any integer from 1 to terminal height inclusive.
+Default is `15`.
+  `let g:ToggleTY_height = 15`
+
+                                                       *'g:ToggleTY_position'*
+Position of the terminal window on the screen.
+Possible values are `'bot'` or `'top'`.
+Default is `'bot'`.
+  `let g:ToggleTY_position = 'bot'`
+
+
+===============================================================================
+USAGE                                                           *togglety-usage*
+
+Configure the plugin as you wish by setting global variables in your vimrc.
+Personally, I think the defaults are fairly reasonable, however, depending on
+the size of your terminal font, you may want to change the window height to 10
+lines or so.
+
+To use the plugin, simply press `<C-B>` or another mapping based on the settings
+you chose. This will pull up a terminal window, draw focus to it, and place you
+in insert mode. To dismiss the terminal, just press the same shortcut again (`<C-B>`).
+
+That's it! Your development experience should now hopefully be a much smoother one.
+
+vim:ft=help:et:ts=2:sw=2:sts=2:norl

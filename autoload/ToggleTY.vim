@@ -1,5 +1,6 @@
 " *************************************************
 " Plugin:  ToggleTY
+" Version: 0.1.1
 " Author:  William Findlay <william@wfindlay.com>
 " License: MIT
 " *************************************************
@@ -9,8 +10,19 @@
 
 " User Defined Settings {{{
 
+" height of terminal window
 if !exists('g:ToggleTY_height')
     let g:ToggleTY_height = 15
+endif
+
+" placement of terminal window
+if !exists('g:ToggleTY_position')
+    let g:ToggleTY_position = 'bot'
+else
+    " correct bottom to bot
+    if g:ToggleTY_position =~? 'bottom'
+        let g:ToggleTY_position = 'bot'
+    endif
 endif
 
 " }}}
@@ -25,7 +37,7 @@ function! ToggleTY#ToggleTerminal() abort
     if term_bufnr == -1
         " open the terminal
         let s:prev_winnr = winnr()
-        execute 'bot ' . g:ToggleTY_height . ' new'
+        execute g:ToggleTY_position . ' ' . g:ToggleTY_height . ' new'
         execute 'term'
         file __Terminal__
         setlocal bufhidden=hide
@@ -45,7 +57,7 @@ function! ToggleTY#ToggleTerminal() abort
         else
             echo winnr()
             let s:prev_winnr = winnr()
-            execute 'bot ' . g:ToggleTY_height . ' split' . ' +buffer' . term_bufnr
+            execute g:ToggleTY_position . ' ' . g:ToggleTY_height . ' split' . ' +buffer' . term_bufnr
             startinsert
         endif
     endif

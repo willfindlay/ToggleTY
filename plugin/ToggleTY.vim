@@ -1,5 +1,6 @@
 " *************************************************
 " Plugin:  ToggleTY
+" Version: 0.1.1
 " Author:  William Findlay <william@wfindlay.com>
 " License: MIT
 " *************************************************
@@ -9,36 +10,38 @@
 
 " User Defined Mappings and Defaults {{{
 
-" global toggle mapping
-if !exists('g:ToggleTY_toggle_button')
-    let g:ToggleTY_toggle_button = '<C-B>'
+" Terminal Toggle Mapping {{{
+
+" global
+if !exists('g:ToggleTY_toggle_mapping')
+    let g:ToggleTY_toggle_mapping = '<C-B>'
 endif
+
 " specific to normal mode
-if !exists('g:ToggleTY_toggle_button_normal')
-    let g:ToggleTY_toggle_button_normal = g:ToggleTY_toggle_button
+if !exists('g:ToggleTY_toggle_mapping_normal')
+    let g:ToggleTY_toggle_mapping_normal = g:ToggleTY_toggle_mapping
 endif
-" specific to visual mode
-if !exists('g:ToggleTY_toggle_button_visual')
-    let g:ToggleTY_toggle_button_visual = g:ToggleTY_toggle_button
-endif
+
 " specific to terminal mode
-if !exists('g:ToggleTY_toggle_button_terminal')
-    let g:ToggleTY_toggle_button_terminal = g:ToggleTY_toggle_button
+if !exists('g:ToggleTY_toggle_mapping_terminal')
+    let g:ToggleTY_toggle_mapping_terminal = g:ToggleTY_toggle_mapping
 endif
+
 " specific to insert mode
-if !exists('g:ToggleTY_toggle_button_insert')
-    let g:ToggleTY_toggle_button_insert = g:ToggleTY_toggle_button
+if !exists('g:ToggleTY_toggle_mapping_insert')
+    let g:ToggleTY_toggle_mapping_insert = g:ToggleTY_toggle_mapping
 endif
+" }}}
 
 " }}}
 
 " Map Keybindings From Above Section {{{
 
-"
+" Terminal Toggle Mapping {{{
 command! ToggleTerminal call ToggleTY#ToggleTerminal()
-execute "nnoremap" g:ToggleTY_toggle_button_normal   ":ToggleTerminal<CR>"
-execute "vnoremap" g:ToggleTY_toggle_button_visual   ":ToggleTerminal<CR>"
-execute "tnoremap" g:ToggleTY_toggle_button_terminal "<C-\\><C-N>:ToggleTerminal<CR>"
-execute "inoremap" g:ToggleTY_toggle_button_insert   "<C-O>:ToggleTerminal<CR>"
+execute "nnoremap" g:ToggleTY_toggle_mapping_normal   ":ToggleTerminal<CR>"
+execute "tnoremap" g:ToggleTY_toggle_mapping_terminal "<C-\\><C-N>:ToggleTerminal<CR>"
+execute "inoremap" g:ToggleTY_toggle_mapping_insert   "<C-O>:ToggleTerminal<CR>"
+" }}}
 
 " }}}
