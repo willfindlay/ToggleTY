@@ -24,7 +24,7 @@ mapping will be an issue for regular vim users. I plan to fix this in the releas
 
 ### Pathogen or Vundle
 
-`cd .vim/bundle && git clone https://github.com/HousedHorse/ToggleTY`
+`cd ~/.vim/bundle && git clone https://github.com/HousedHorse/ToggleTY`
 
 ## Usage
 
