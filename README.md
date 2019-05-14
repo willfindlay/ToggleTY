@@ -15,6 +15,8 @@
 
 A vim plugin I wrote to toggle a terminal window for the user's convenience.
 
+<img width="50%" style="display: inline-block;" src="screenshots/before.png"><img width="50%" style="display: inline-block;" src="screenshots/after.png">
+
 ## Requirements
 
 This has been tested on Neovim and is currently in beta. I'm thinking that the terminal
